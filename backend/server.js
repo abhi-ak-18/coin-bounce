@@ -8,7 +8,7 @@ const cors = require ('cors');
 
 const corsOptions = {
   credentials: true,
-  origin: ["http://localhost:3000"],
+  origin: ["https://github.com/abhi-ak-18/coin-bounce/tree/main/backend"],
 };
 
 const app = express();
