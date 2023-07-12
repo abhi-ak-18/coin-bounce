@@ -1,0 +1,8 @@
+.loaderWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20ox;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh -400);
+}
