@@ -6,16 +6,25 @@ const errorHandler = require('./middlewares/errorHandler');
 const cookieParser = require('cookie-parser');
 const cors = require ('cors');
 
-const corsOptions = {
-  credentials: true,
-  origin: ["https://github.com/abhi-ak-18/coin-bounce/tree/main/backend"],
-};
+//const corsOptions = {
+//  credentials: true,
+//  origin: ["http://localhost:3000"],
+//};
 
 const app = express();
 
 app. use(cookieParser());
 
-app.use(cors(corsOptions));
+//app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      return callback(null, true);
+    },
+    optionsSuccessStatus: 200,
+    credentials: true,
+  })
+);
 
 app.use(express.json({limit:'50mb'}));
 
