@@ -35,7 +35,6 @@ dbConnect();
 
 app.get('/', (req, res) => {
   res.send('Hello World!123')
-  res.send(`Backend app listening on port number ${port}`)
 })
 
 app.use('/storage', express.static('storage'));
